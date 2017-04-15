@@ -1,0 +1,21 @@
+get all players for a particular week
+
+var id = "1536682";  // Login to fantasy and click on points tab. Paste the id u find in the url here
+var uri = "https://fantasy.premierleague.com/drf/entry/" + id + "/event/8/picks"
+
+1536682 = team_id
+8 = gw
+
+$.get(uri, function(data) {
+    for(var i in data["picks"]) players.push(data["picks"][i]["element"]);
+})
+
+get player scores for a particular gw
+
+var uri2="https://fantasy.premierleague.com/drf/event/8/live"
+
+$.get(uri2, function(data) {
+	for(var i in players)
+        console.log(data["elements"][players[i]]["stats"]["total_points"]);
+})
+
