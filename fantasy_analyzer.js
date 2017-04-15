@@ -5,7 +5,7 @@ $.get(allInfo, function(allInfo) {
 	var players = {};
 	var gw_players = [];
 	var sorted_players = [];
-	var j = 30;
+	var j = 0;
 	var lastWeek = 32;  // Change value to last game week value
 	function fetchNextGw() {
 		j++;
